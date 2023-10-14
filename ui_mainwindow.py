@@ -321,9 +321,9 @@ class Ui_MainWindow(object):
         font = QFont()
         font.setFamilies([u"Consolas"])
         self.plainTextEditTerminal.setFont(font)
-        self.plainTextEditTerminal.setAutoFillBackground(False)
         self.plainTextEditTerminal.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.plainTextEditTerminal.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.plainTextEditTerminal.setLineWrapMode(QPlainTextEdit.NoWrap)
         self.plainTextEditTerminal.setReadOnly(True)
 
         self.verticalLayout.addWidget(self.plainTextEditTerminal)

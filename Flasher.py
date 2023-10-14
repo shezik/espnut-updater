@@ -23,7 +23,7 @@ class Flasher:
 
     def Flash(self, serialPort, baudrate, bootloaderPath='', partitionsPath='', boot_app0Path='', firmwarePath='', fsPath=''):
         if self._plainTextEdit.toPlainText() != '':
-            self._log('-' * 128)
+            self._log('-' * 128 + '\n')
 
         arguments = ['--chip', 'esp32s3', '--before', 'default_reset', '--after', 'hard_reset write_flash', '-z', '--flash_mode', 'dio', '--flash_freq', '80m', '--flash_size', '8MB']
         arguments.append('--port')
@@ -51,7 +51,7 @@ class Flasher:
 
     def FlashFS(self, serialPort, baudrate, dir, imgPath):
         if self._plainTextEdit.toPlainText() != '':
-            self._log('-' * 128)
+            self._log('-' * 128 + '\n')
 
         arguments = ['-s', '1572864', '-p', '256', '-b', '4096']
         arguments.append('-c')

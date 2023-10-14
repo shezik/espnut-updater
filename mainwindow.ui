@@ -842,14 +842,14 @@
       <property name="statusTip">
        <string>命令执行输出。</string>
       </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
       <property name="verticalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOn</enum>
       </property>
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QPlainTextEdit::NoWrap</enum>
       </property>
       <property name="readOnly">
        <bool>true</bool>
