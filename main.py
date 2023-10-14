@@ -4,7 +4,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtCore import QEvent
 from FileDialog import FileDialog
-from SerialPorts import SerialPorts
+from serial.tools.list_ports import comports
 
 # Important:
 # You need to run the following command to generate the ui_form.py file
@@ -36,7 +36,7 @@ class MainWindow(QMainWindow):
     def refreshSerialComboBox(self):
         currentPort = self.ui.comboBoxSerialPort.currentText()
         self.ui.comboBoxSerialPort.clear()
-        self.ui.comboBoxSerialPort.addItems(SerialPorts())
+        self.ui.comboBoxSerialPort.addItems(sorted([comport.device for comport in comports()]))
         self.ui.comboBoxSerialPort.setCurrentText(currentPort)
 
     def refreshBaudrateComboBox(self):
