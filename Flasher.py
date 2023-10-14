@@ -62,7 +62,8 @@ class Flasher:
         self.Terminate()
         self._process.start('./mklittlefs', arguments)
         self._process.waitForFinished()
-        self.Flash(serialPort, baudrate, fsPath=imgPath)
+        if self._process.exitStatus() == QProcess.NormalExit and self._process.exitCode() == 0:
+            self.Flash(serialPort, baudrate, fsPath=imgPath)
 
     def Terminate(self):
         self._process.terminate()
