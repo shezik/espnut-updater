@@ -25,11 +25,12 @@ class Flasher:
         if self._plainTextEdit.toPlainText() != '':
             self._log('-' * 128 + '\n')
 
-        arguments = ['--chip', 'esp32s3', '--before', 'default_reset', '--after', 'hard_reset write_flash', '-z', '--flash_mode', 'dio', '--flash_freq', '80m', '--flash_size', '8MB']
+        arguments = ['--chip', 'esp32s3']
         arguments.append('--port')
         arguments.append(serialPort)
         arguments.append('--baud')
         arguments.append(baudrate)
+        arguments += ['--before', 'default_reset', '--after', 'hard_reset', 'write_flash', '-z', '--flash_mode', 'dio', '--flash_freq', '80m', '--flash_size', '8MB']
         if bootloaderPath != '':
             arguments.append('0x00000000')
             arguments.append(bootloaderPath)
@@ -47,7 +48,7 @@ class Flasher:
             arguments.append(fsPath)
 
         self.Terminate()
-        self._process.start('esptool', arguments)
+        self._process.start('./venv/Scripts/esptool', arguments)
 
     def FlashFS(self, serialPort, baudrate, dir, imgPath):
         if self._plainTextEdit.toPlainText() != '':
@@ -61,7 +62,7 @@ class Flasher:
         self.Terminate()
         self._process.start('./mklittlefs', arguments)
         self._process.waitForFinished()
-        self.Flash(self, serialPort, baudrate, fsPath=imgPath)
+        self.Flash(serialPort, baudrate, fsPath=imgPath)
 
     def Terminate(self):
         self._process.terminate()

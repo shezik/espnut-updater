@@ -1056,5 +1056,6 @@
   <slot>openFile_4()</slot>
   <slot>openFile_5()</slot>
   <slot>pushButtonStartClicked()</slot>
+  <slot>updatePushButtonStartAvailability()</slot>
  </slots>
 </ui>
