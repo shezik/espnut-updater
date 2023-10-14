@@ -1,5 +1,7 @@
 {
     "files": [
+        "FileDialog.py",
+        "SerialPorts.py",
         "main.py",
         "mainwindow.ui"
     ]

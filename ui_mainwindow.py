@@ -340,6 +340,11 @@ class Ui_MainWindow(object):
         self.toolButtonClear_3.clicked.connect(self.lineEdit_3.clear)
         self.toolButtonClear_4.clicked.connect(self.lineEdit_4.clear)
         self.toolButtonClear_5.clicked.connect(self.lineEdit_5.clear)
+        self.toolButtonBrowse_1.clicked.connect(MainWindow.openFile_1)
+        self.toolButtonBrowse_2.clicked.connect(MainWindow.openFile_2)
+        self.toolButtonBrowse_3.clicked.connect(MainWindow.openFile_3)
+        self.toolButtonBrowse_4.clicked.connect(MainWindow.openFile_4)
+        self.toolButtonBrowse_5.clicked.connect(MainWindow.openFile_5)
 
         self.tabWidget.setCurrentIndex(0)
 
@@ -415,6 +420,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(statustip)
         self.comboBoxSerialPort.setStatusTip(QCoreApplication.translate("MainWindow", u"\u9009\u62e9\u4e32\u53e3\u8bbe\u5907\u3002", None))
 #endif // QT_CONFIG(statustip)
+        self.comboBoxSerialPort.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u6682\u65e0", None))
         self.labelBaudrate.setText(QCoreApplication.translate("MainWindow", u"\u6ce2\u7279\u7387", None))
 #if QT_CONFIG(statustip)
         self.comboBoxBaudrate.setStatusTip(QCoreApplication.translate("MainWindow", u"\u9009\u62e9\u4e0e\u8bbe\u5907\u901a\u4fe1\u7684\u6ce2\u7279\u7387\u3002", None))

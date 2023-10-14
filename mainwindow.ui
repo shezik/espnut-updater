@@ -317,6 +317,9 @@
           <property name="editable">
            <bool>true</bool>
           </property>
+          <property name="placeholderText">
+           <string>暂无</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -944,5 +947,92 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>toolButtonBrowse_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFile_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>843</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonBrowse_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFile_2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>843</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonBrowse_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFile_3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>843</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonBrowse_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFile_4()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>843</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonBrowse_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFile_5()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>844</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <slot>openFile_1()</slot>
+  <slot>openFile_2()</slot>
+  <slot>openFile_3()</slot>
+  <slot>openFile_4()</slot>
+  <slot>openFile_5()</slot>
+ </slots>
 </ui>
