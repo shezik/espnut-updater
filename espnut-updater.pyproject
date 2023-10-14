@@ -1,6 +1,7 @@
 {
     "files": [
         "FileDialog.py",
+        "Flasher.py",
         "main.py",
         "mainwindow.ui"
     ]

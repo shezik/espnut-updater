@@ -318,6 +318,9 @@ class Ui_MainWindow(object):
         palette.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush9)
 #endif
         self.plainTextEditTerminal.setPalette(palette)
+        font = QFont()
+        font.setFamilies([u"Consolas"])
+        self.plainTextEditTerminal.setFont(font)
         self.plainTextEditTerminal.setAutoFillBackground(False)
         self.plainTextEditTerminal.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.plainTextEditTerminal.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
@@ -345,6 +348,7 @@ class Ui_MainWindow(object):
         self.toolButtonBrowse_3.clicked.connect(MainWindow.openFile_3)
         self.toolButtonBrowse_4.clicked.connect(MainWindow.openFile_4)
         self.toolButtonBrowse_5.clicked.connect(MainWindow.openFile_5)
+        self.pushButtonStart.clicked.connect(MainWindow.pushButtonStartClicked)
 
         self.tabWidget.setCurrentIndex(0)
 

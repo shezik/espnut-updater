@@ -3,8 +3,9 @@ import sys
 
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtCore import QEvent
-from FileDialog import FileDialog
 from serial.tools.list_ports import comports
+from FileDialog import FileDialog
+from Flasher import Flasher
 
 # Important:
 # You need to run the following command to generate the ui_form.py file
@@ -26,6 +27,8 @@ class MainWindow(QMainWindow):
         self.ui.comboBoxSerialPort.setCurrentIndex(0)
         ## Init baud rate combo box
         self.refreshBaudrateComboBox()
+        # Init Flasher
+        self.flasher = Flasher(self.ui.plainTextEditTerminal)
 
     # Click to refresh serial port list
     def eventFilter(self, object, event):
@@ -62,9 +65,26 @@ class MainWindow(QMainWindow):
         self.openBinToWidget(self.ui.lineEdit_3)
     def openFile_4(self):
         self.openBinToWidget(self.ui.lineEdit_4)
-
     def openFile_5(self):
         self.openDirToWidget(self.ui.lineEdit_5)
+
+    # Triggered on lineEdit text change and tab change
+    def updatePushButtonStartAvailability(self):
+        pass
+
+    def pushButtonStartClicked(self):
+        if self.ui.tabWidget.currentIndex() == 0:
+            self.flasher.Flash(self.ui.comboBoxSerialPort.currentText(), \
+                               self.ui.comboBoxBaudrate.currentText(), \
+                               self.ui.lineEdit_1.text(), \
+                               self.ui.lineEdit_2.text(), \
+                               self.ui.lineEdit_3.text(), \
+                               self.ui.lineEdit_4.text())
+        elif self.ui.tabWidget.currentIndex() == 1:
+            self.flasher.FlashFS(self.ui.comboBoxSerialPort.currentText(), \
+                                 self.ui.comboBoxBaudrate.currentText(), \
+                                 self.ui.lineEdit_5.text(), \
+                                 './littlefs.bin')
 
 
 

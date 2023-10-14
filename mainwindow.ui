@@ -834,6 +834,11 @@
         </disabled>
        </palette>
       </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+       </font>
+      </property>
       <property name="statusTip">
        <string>命令执行输出。</string>
       </property>
@@ -1027,6 +1032,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButtonStart</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushButtonStartClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>948</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>openFile_1()</slot>
@@ -1034,5 +1055,6 @@
   <slot>openFile_3()</slot>
   <slot>openFile_4()</slot>
   <slot>openFile_5()</slot>
+  <slot>pushButtonStartClicked()</slot>
  </slots>
 </ui>
