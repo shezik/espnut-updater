@@ -8,3 +8,4 @@ First build with Qt Creator, then run [nuitka-build.bat](nuitka-build.bat) to co
 - Flashing FS images without making one first
 - I18n
 - Error messages in console e.g. tools not found
+- Show serial device description
