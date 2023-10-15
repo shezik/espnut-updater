@@ -1,5 +1,3 @@
-venv/
-
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 
@@ -71,6 +69,8 @@ CMakeLists.txt.user*
 
 # Binaries
 # --------
-*.dll
-*.exe
+venv/
+*.build/
+*.dist/
+*.bin
 

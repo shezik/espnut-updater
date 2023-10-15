@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 11.0.3, 2023-10-15T12:26:27. -->
+<!-- Written by QtCreator 11.0.3, 2023-10-15T12:43:10. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -149,7 +149,6 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">main.py</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/shenz/Documents/GitHub/espnut-updater/main.py</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/shenz/Documents/GitHub/espnut-updater/main.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{c7c70880-ef6c-45c4-81fe-e29cf4cb505e}</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\shenz\Documents\GitHub\espnut-updater\main.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>

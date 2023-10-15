@@ -72,7 +72,7 @@ class Flasher:
             arguments.append(fsPath)
 
         self._state = FlasherState.Flash
-        self._process.start('./venv/Scripts/esptool', arguments)
+        self._process.start('bin/esptool', arguments)
 
     def FlashFS(self, serialPort, baudrate, dir, imgPath):
         if self._state != FlasherState.Idle:
@@ -89,7 +89,7 @@ class Flasher:
         self._state = FlasherState.BuildFS
         self._step_2_arguments.clear()
         self._step_2_arguments.extend([serialPort, baudrate, imgPath])
-        self._process.start('./mklittlefs', arguments)
+        self._process.start('bin/mklittlefs', arguments)
 
     def _flash_fs_step_2(self, arguments):
         if self._process.exitStatus() == QProcess.NormalExit and self._process.exitCode() == 0:
