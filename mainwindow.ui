@@ -1048,6 +1048,134 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>lineEdit_1</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updatePushButtonStartAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_2</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updatePushButtonStartAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_3</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updatePushButtonStartAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_4</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updatePushButtonStartAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_5</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updatePushButtonStartAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tabWidget</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updatePushButtonStartAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>455</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxSerialPort</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updatePushButtonStartAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>948</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxBaudrate</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updatePushButtonStartAvailability()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>948</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>openFile_1()</slot>

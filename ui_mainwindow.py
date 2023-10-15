@@ -349,6 +349,14 @@ class Ui_MainWindow(object):
         self.toolButtonBrowse_4.clicked.connect(MainWindow.openFile_4)
         self.toolButtonBrowse_5.clicked.connect(MainWindow.openFile_5)
         self.pushButtonStart.clicked.connect(MainWindow.pushButtonStartClicked)
+        self.lineEdit_1.textChanged.connect(MainWindow.updatePushButtonStartAvailability)
+        self.lineEdit_2.textChanged.connect(MainWindow.updatePushButtonStartAvailability)
+        self.lineEdit_3.textChanged.connect(MainWindow.updatePushButtonStartAvailability)
+        self.lineEdit_4.textChanged.connect(MainWindow.updatePushButtonStartAvailability)
+        self.lineEdit_5.textChanged.connect(MainWindow.updatePushButtonStartAvailability)
+        self.tabWidget.currentChanged.connect(MainWindow.updatePushButtonStartAvailability)
+        self.comboBoxSerialPort.currentTextChanged.connect(MainWindow.updatePushButtonStartAvailability)
+        self.comboBoxBaudrate.currentTextChanged.connect(MainWindow.updatePushButtonStartAvailability)
 
         self.tabWidget.setCurrentIndex(0)
 
