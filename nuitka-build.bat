@@ -1,1 +1,1 @@
-nuitka --standalone --include-data-files=mklittlefs.exe=mklittlefs.exe --disable-console --enable-plugin=pyside6 --company-name=shezik --copyright=shezik --file-description="espnut Updater" --product-name="espnut Updater" --file-version=0.1 --product-version=0.1 main.py
+nuitka --standalone --include-data-dir=bin=bin --disable-console --enable-plugin=pyside6 --company-name=shezik --copyright=shezik --file-description="espnut Updater" --product-name="espnut Updater" --file-version=0.1 --product-version=0.1 --windows-icon-from-ico=peanut.ico main.py

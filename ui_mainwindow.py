@@ -19,12 +19,16 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QHBoxLayout, QLabel,
     QLineEdit, QMainWindow, QMenuBar, QPlainTextEdit,
     QPushButton, QSizePolicy, QSpacerItem, QStatusBar,
     QTabWidget, QToolButton, QVBoxLayout, QWidget)
+import rc_resources
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1000, 575)
+        icon = QIcon()
+        icon.addFile(u":/images/peanut.ico", QSize(), QIcon.Normal, QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)

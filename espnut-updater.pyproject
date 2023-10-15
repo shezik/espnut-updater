@@ -3,6 +3,7 @@
         "FileDialog.py",
         "Flasher.py",
         "main.py",
-        "mainwindow.ui"
+        "mainwindow.ui",
+        "resources.qrc"
     ]
 }
